@@ -1,0 +1,325 @@
+start create 20news-18828_dic
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /Users/zhangyunhe/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+Group alt.atheism done
+Group comp.graphics done
+Group comp.os.ms-windows.misc done
+Group comp.sys.ibm.pc.hardware done
+Group comp.sys.mac.hardware done
+Group comp.windows.x done
+Group misc.forsale done
+Group rec.autos done
+Group rec.motorcycles done
+Group rec.sport.baseball done
+Group rec.sport.hockey done
+Group sci.crypt done
+Group sci.electronics done
+Group sci.med done
+Group sci.space done
+Group soc.religion.christian done
+Group talk.politics.guns done
+Group talk.politics.mideast done
+Group talk.politics.misc done
+Group talk.religion.misc done
+Create 20news-18828_dic complete
+
+start create 20news-18828_count
+89647 different words and counts of words are 3184937
+Get words that occur more than 5 times, so the specific words are
+27626 different words and counts of words are 3082481
+Group 1 done
+Group 10 done
+Group 11 done
+Group 12 done
+Group 13 done
+Group 14 done
+Group 15 done
+Group 16 done
+Group 17 done
+Group 18 done
+Group 19 done
+Group 2 done
+Group 20 done
+Group 3 done
+Group 4 done
+Group 5 done
+Group 6 done
+Group 7 done
+Group 8 done
+Group 9 done
+Create 20news-18828_count complete
+
+set cv to 10-fold
+random seed is 10
+
+1 start:
+Group 1 counts of words are 124702
+Group 10 counts of words are 108243
+Group 11 counts of words are 130285
+Group 12 counts of words are 162438
+Group 13 counts of words are 99892
+Group 14 counts of words are 144250
+Group 15 counts of words are 147287
+Group 16 counts of words are 170645
+Group 17 counts of words are 152978
+Group 18 counts of words are 214832
+Group 19 counts of words are 156608
+Group 2 counts of words are 129571
+Group 20 counts of words are 103104
+Group 3 counts of words are 293477
+Group 4 counts of words are 96293
+Group 5 counts of words are 82283
+Group 6 counts of words are 161764
+Group 7 counts of words are 74481
+Group 8 counts of words are 104186
+Group 9 counts of words are 98569
+counts of words in total training set is 2755888
+
+1 results: 
+Accuracy: 0.8820729772607087
+F1 Score: 0.8728424221170681
+
+2 start:
+Group 1 counts of words are 127670
+Group 10 counts of words are 109338
+Group 11 counts of words are 134065
+Group 12 counts of words are 158878
+Group 13 counts of words are 99923
+Group 14 counts of words are 141973
+Group 15 counts of words are 144000
+Group 16 counts of words are 172606
+Group 17 counts of words are 152448
+Group 18 counts of words are 218325
+Group 19 counts of words are 162174
+Group 2 counts of words are 138917
+Group 20 counts of words are 100319
+Group 3 counts of words are 307727
+Group 4 counts of words are 96194
+Group 5 counts of words are 87632
+Group 6 counts of words are 156407
+Group 7 counts of words are 74201
+Group 8 counts of words are 104101
+Group 9 counts of words are 98826
+counts of words in total training set is 2785724
+
+2 results: 
+Accuracy: 0.881885593220339
+F1 Score: 0.8730869070060667
+
+3 start:
+Group 1 counts of words are 127438
+Group 10 counts of words are 108312
+Group 11 counts of words are 131951
+Group 12 counts of words are 165191
+Group 13 counts of words are 99660
+Group 14 counts of words are 142005
+Group 15 counts of words are 146802
+Group 16 counts of words are 169092
+Group 17 counts of words are 148122
+Group 18 counts of words are 219997
+Group 19 counts of words are 156935
+Group 2 counts of words are 133885
+Group 20 counts of words are 103469
+Group 3 counts of words are 295479
+Group 4 counts of words are 95462
+Group 5 counts of words are 86668
+Group 6 counts of words are 167011
+Group 7 counts of words are 73129
+Group 8 counts of words are 101104
+Group 9 counts of words are 98836
+counts of words in total training set is 2770548
+
+3 results: 
+Accuracy: 0.8891834570519618
+F1 Score: 0.8821955388097582
+
+4 start:
+Group 1 counts of words are 124474
+Group 10 counts of words are 109216
+Group 11 counts of words are 135303
+Group 12 counts of words are 165057
+Group 13 counts of words are 94554
+Group 14 counts of words are 139514
+Group 15 counts of words are 143197
+Group 16 counts of words are 170051
+Group 17 counts of words are 155080
+Group 18 counts of words are 220282
+Group 19 counts of words are 159178
+Group 2 counts of words are 139549
+Group 20 counts of words are 101713
+Group 3 counts of words are 297897
+Group 4 counts of words are 96778
+Group 5 counts of words are 85569
+Group 6 counts of words are 154743
+Group 7 counts of words are 73773
+Group 8 counts of words are 103809
+Group 9 counts of words are 97465
+counts of words in total training set is 2767202
+
+4 results: 
+Accuracy: 0.8938992042440318
+F1 Score: 0.8885541864275819
+
+5 start:
+Group 1 counts of words are 127977
+Group 10 counts of words are 108417
+Group 11 counts of words are 134112
+Group 12 counts of words are 168259
+Group 13 counts of words are 99091
+Group 14 counts of words are 146151
+Group 15 counts of words are 146510
+Group 16 counts of words are 170875
+Group 17 counts of words are 151506
+Group 18 counts of words are 219975
+Group 19 counts of words are 159632
+Group 2 counts of words are 131215
+Group 20 counts of words are 105291
+Group 3 counts of words are 293623
+Group 4 counts of words are 95547
+Group 5 counts of words are 81574
+Group 6 counts of words are 157387
+Group 7 counts of words are 73870
+Group 8 counts of words are 105559
+Group 9 counts of words are 94836
+counts of words in total training set is 2771407
+
+5 results: 
+Accuracy: 0.8874137015400956
+F1 Score: 0.8806995571245316
+
+6 start:
+Group 1 counts of words are 122706
+Group 10 counts of words are 107876
+Group 11 counts of words are 135578
+Group 12 counts of words are 163492
+Group 13 counts of words are 99295
+Group 14 counts of words are 142290
+Group 15 counts of words are 147192
+Group 16 counts of words are 169894
+Group 17 counts of words are 150434
+Group 18 counts of words are 222720
+Group 19 counts of words are 162169
+Group 2 counts of words are 130562
+Group 20 counts of words are 104371
+Group 3 counts of words are 308632
+Group 4 counts of words are 96271
+Group 5 counts of words are 85996
+Group 6 counts of words are 164816
+Group 7 counts of words are 74328
+Group 8 counts of words are 105688
+Group 9 counts of words are 98550
+counts of words in total training set is 2792860
+
+6 results: 
+Accuracy: 0.8798511430090378
+F1 Score: 0.8718451733513195
+
+7 start:
+Group 1 counts of words are 126877
+Group 10 counts of words are 111109
+Group 11 counts of words are 132737
+Group 12 counts of words are 164196
+Group 13 counts of words are 100968
+Group 14 counts of words are 147573
+Group 15 counts of words are 144541
+Group 16 counts of words are 165397
+Group 17 counts of words are 156531
+Group 18 counts of words are 218335
+Group 19 counts of words are 150952
+Group 2 counts of words are 141562
+Group 20 counts of words are 101852
+Group 3 counts of words are 302479
+Group 4 counts of words are 99009
+Group 5 counts of words are 85114
+Group 6 counts of words are 161621
+Group 7 counts of words are 71565
+Group 8 counts of words are 105715
+Group 9 counts of words are 97038
+counts of words in total training set is 2785171
+
+7 results: 
+Accuracy: 0.8888888888888888
+F1 Score: 0.8799510210203512
+
+8 start:
+Group 1 counts of words are 126903
+Group 10 counts of words are 109507
+Group 11 counts of words are 133544
+Group 12 counts of words are 165346
+Group 13 counts of words are 100158
+Group 14 counts of words are 142316
+Group 15 counts of words are 148499
+Group 16 counts of words are 169952
+Group 17 counts of words are 151923
+Group 18 counts of words are 221914
+Group 19 counts of words are 150384
+Group 2 counts of words are 141296
+Group 20 counts of words are 105010
+Group 3 counts of words are 265854
+Group 4 counts of words are 96125
+Group 5 counts of words are 84999
+Group 6 counts of words are 155315
+Group 7 counts of words are 71587
+Group 8 counts of words are 104362
+Group 9 counts of words are 97408
+counts of words in total training set is 2742402
+
+8 results: 
+Accuracy: 0.883448642895157
+F1 Score: 0.8761255701137864
+
+9 start:
+Group 1 counts of words are 123019
+Group 10 counts of words are 108789
+Group 11 counts of words are 131028
+Group 12 counts of words are 161336
+Group 13 counts of words are 100430
+Group 14 counts of words are 145487
+Group 15 counts of words are 145003
+Group 16 counts of words are 169424
+Group 17 counts of words are 154275
+Group 18 counts of words are 218378
+Group 19 counts of words are 159136
+Group 2 counts of words are 130029
+Group 20 counts of words are 105489
+Group 3 counts of words are 294591
+Group 4 counts of words are 97801
+Group 5 counts of words are 86140
+Group 6 counts of words are 164350
+Group 7 counts of words are 73450
+Group 8 counts of words are 106051
+Group 9 counts of words are 97968
+counts of words in total training set is 2772174
+
+9 results: 
+Accuracy: 0.869542066027689
+F1 Score: 0.8619615443637528
+
+10 start:
+Group 1 counts of words are 127217
+Group 10 counts of words are 107554
+Group 11 counts of words are 126035
+Group 12 counts of words are 164275
+Group 13 counts of words are 99665
+Group 14 counts of words are 145003
+Group 15 counts of words are 149064
+Group 16 counts of words are 172938
+Group 17 counts of words are 147757
+Group 18 counts of words are 220234
+Group 19 counts of words are 156986
+Group 2 counts of words are 135673
+Group 20 counts of words are 104049
+Group 3 counts of words are 320438
+Group 4 counts of words are 97768
+Group 5 counts of words are 85371
+Group 6 counts of words are 162843
+Group 7 counts of words are 74079
+Group 8 counts of words are 104685
+Group 9 counts of words are 97319
+counts of words in total training set is 2798953
+
+10 results: 
+Accuracy: 0.8923240938166311
+F1 Score: 0.8812992289722862
+

@@ -1,0 +1,97 @@
+Dataset:
+
+	Download ‘20news-18828.tar.gz’ in webpage blow:
+
+	http://qwone.com/~jason/20Newsgroups/
+
+	Since it is about 200M, I cannot submit this dataset.
+
+	Unzip ‘20news-18828.tar.gz’ get directory ‘20news-18828’
+
+
+How to use:
+
+	put dataset directory ‘20news-18828’ with two python files ‘CS9417Proj.py’ and ‘CS9417Proj_test.py’ in same path.
+
+	Run ‘CS9417Proj_test.py’, then will get the result.
+
+	a sample result show in file ‘output_format’ (10 fold cross-validation, seed number 10)
+
+
+Two python files ‘CS9417Proj.py’ and ‘CS9417Proj_test.py’:
+
+	‘CS9417Proj.py’ contain classes and functions which implement the Multinomial Naive Bayes.
+	‘CS9417Proj_test.py’ will call the classes and functions in ‘CS9417Proj.py’ to get result
+
+
+‘CS9417Proj.py’ contain 3 classes and 2 helper functions:
+	
+	
+	1.class Prepare()
+	
+	use for prepare the data for training and testing
+	
+	has 3 functions:
+
+	(1) read_and_create_index() : Create a new directory call ‘20news-18828_dic’ and 20 directories inside named 1 to 20 to represent 20 groups. 
+	Each new group contain new files, each file corresponding to one News file in original dataset ‘20news-18828’, contain all words in that News file. 
+	Read each News file in original dataset, get each words, call PorterStemmer() to get stems, and drop the word if it is in stopwords list.
+	the new files’ names are different to the original News files, I rename them base on group, for example in group ‘1’, files’ name are ‘1-1’, ‘1-2’ and so forth. 
+	This is because some News files have same name but in different group, and their contents are totally different.
+	(2) write_total_dic() : Read all files in new directory ‘20news-18828_dic’, get all words in the files and also count the frequency of each words, 
+	drop the words which occur less than 5 times, then the rest words are specific words I need.	Create a new directory ‘20news-18828_count’, quite similar with ‘20news-18828_dic’, read all files in directory ‘20news-18828_dic’ again, 
+	this time, count each word for each file, write the words and the words’ frequencies into files in new directory ‘20news-18828_count’.	Now the ‘20news-18828_count’ directory contain 20 directories named 1 to 20 represent to 20 News group, 
+	inside group directories are files which contain the specific words and counts of words for the corresponding News files in original dataset. 	(3) set_cv_fold(n, seed) : for using cross-validation to evaluate performance, need set fold number, 
+	first shuffle sequences of files in groups in ‘20news-18828_count’ directory then separate files into n fold(n list).
+	there is random.seed(seed) for evaluating performance easily.
+
+
+	2.class Multinomial_NB()
+	
+	implement the Multinomial Naive Bayes model.
+
+	has 2 functions
+
+	(1) nb_multinomial_train(train_set) : ‘train_set’ is dictionary contain 20 groups as key value is list which contains files used for training in that group.
+	get files name in ‘train_set’ and read these files in directory ‘20news-18828_count’ to get each files’ specific words and counts of words.
+	if a words not occur in that group but occur in whole dataset, set counts of words to 0.
+	calculate the 20 groups’ P(g_j) and store them in dictionary 'self.NB_group_p'
+	for each group, calculate P(w_i│g_j) for each specific word in that group store in 'self.NB_word_P’. 
+	Since some counts of words are 0, need smooth number alpha, here I set it to 0.01.
+	to avoid the number out range of value type ‘float’, use math.log with P(g_j) and P(w_i│g_j)
+	
+	(2) nb_multinomial_test(test_set) : test_set contain 20 groups contain 20 groups as key value is list which contains files used for testing in that group.
+	get file name in ‘test_set’ and read these files in directory ‘20news-18828_count’ to get each files’ specific words and counts of words.
+	classify files one by one,
+	loop 20 times for each group, for every loop, get P(g_j) in ‘self.NB_group_p’, get every words’ P(w_i│g_j)
+	use Multinomial Naive Bayes formulation to calculate probability of files in group g_j
+	the group which’s probability is highest in 20 groups is the prediction group	
+	compare the prediction group with true group to check if prediction is right.
+	calculate the accuracy and F1 score for testing set.
+
+
+	3.class Bernoulli_NB() 
+
+	this part is implementing Bernoulli mode, just use for checking if my choice is right
+	since I focus on implementing Multinomial model, please skip this part
+
+
+	1. def get_words(line):
+	
+	split the line and get words in line
+	drop the stop word and get word's stem
+	used in ‘read_and_create_index()’ part
+
+	2. def chunk(lst,n):
+	
+	split a list into n parts
+	used in ‘set_cv_fold(n)’ part
+
+‘CS9417Proj_test.py’ use class and functions in ‘CS9417Proj.py’
+	
+	there is a loop for validation test, since split the files in n fold in function ‘set_cv_fold(n)’
+	loop n times, every time use 1 fold for testing set, and rest folds for training test
+
+
+
+	
